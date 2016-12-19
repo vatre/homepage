@@ -1,0 +1,61 @@
+html {
+  height: 95%;
+  width: 98%;
+  font-size: 1.2em;
+}
+
+html body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+
+  font-family: "Raleway";
+}
+
+body .container-one {
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+
+  display: -webkit-flex;
+  display:flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+body .side {
+  width: 20%;
+}
+
+body #right-side {
+  text-align: right;
+}
+
+body .central {
+  width: 40%;
+}
+
+.side ul#quick-access {
+  list-style-type: none;
+}
+
+.side ul#quick-access li {
+  margin: 5px 7px 5px 0;
+}
+
+.side ul#quick-access li:hover {
+  cursor: pointer;
+  font-size: 1.05em;
+  transition: font-size 300ms;
+}
+
+.side ul#quick-access .shortcut {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: rgba(1, 1, 1, 0.6);
+  margin-right: 10px;
+}

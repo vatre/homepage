@@ -156,9 +156,9 @@ $(document).ready(function() {
     234: "XF86Back",
     255: "toggle touchpad"
   };
-
+  
   var keyToTarget = [];
-
+  
   $("#quick-access li").each(function() {
     var item = {
       id: $(this).data('id'),
@@ -188,6 +188,8 @@ $(document).ready(function() {
     var target = $(this).data('target');
     window.location.href = target;
   });
+  
+  $(".central p").trigger("focus");
 
 
 });

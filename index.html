@@ -10,29 +10,91 @@
 
 <body>
   <div class="container-one side">
-    <div class="container-two" id="weather">
-      <div id="mtp" data-owid="2992165">
-        <h2>
-        Montpellier
-        </h2>
-        <h3>
-        
-      </h3>
-      </div>
+    <div class="container-two">
 
-      <div id="paris" data-owid="2988507">
-        <h2>
-        Paris
-        </h2>
-        <h3>
-        
-      </h3>
-      </div>
+
     </div>
   </div>
   <div class="container-one central">
-    <div class="container-two">
-      <p>Home page</p>
+    <p>Home page</p>
+    <div></div>
+    <div id="weather">
+      <div class="wth-city-container" id="mtp" data-owid="2992165">
+
+        <div class="main-weather-box">
+          <div class="text">
+            <p class="city-name">
+              Montpellier
+            </p>
+            <p class="weather-descr">
+              Nuageux
+            </p>
+          </div>
+          <div class="illustr">
+            <img src="img/question.png" alt="" />
+          </div>
+          <div class="temp">
+            9 °C
+          </div>
+        </div>
+
+        <div class="details-box">
+          <div class="floor">
+            <div class="humidity">
+              Humidité : 91 %
+            </div>
+            <div class="wind">
+              Vent : 18 km/h
+            </div>
+          </div>
+          <div class="floor">
+            <div class="sunrise">
+              Lever du soleil : 6h03
+            </div>
+            <div class="sunset">
+              Coucher du soleil : 17h34
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wth-city-container" id="paris" data-owid="2988507">
+        <div class="main-weather-box">
+          <div class="text">
+            <p class="city-name">
+              Paris
+              <p>
+                <p class="weather-descr">
+                  Nuageux
+                </p>
+          </div>
+          <div class="illustr">
+            <img src="img/question.png" alt="" />
+          </div>
+          <div class="temp">
+            9 °C
+          </div>
+        </div>
+        <div class="details-box">
+          <div class="floor">
+            <div class="humidity">
+              Humidité : 91 %
+            </div>
+            <div class="wind">
+              Vent : 18 km/h
+            </div>
+          </div>
+          <div class="floor">
+            <div class="sunrise">
+              Lever du soleil : 6h03
+            </div>
+            <div class="sunset">
+              Coucher du soleil : 17h34
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container-one side" id="right-side">
@@ -55,6 +117,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/quickaccess.js"></script>
+<script src="js/weather.js"></script>
 
 </html>
 

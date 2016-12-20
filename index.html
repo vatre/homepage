@@ -2,38 +2,43 @@
 <html>
 
 <head>
-    <title>Home page</title>
+  <title>Home page</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400|Raleway:400,500,500i,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400|Raleway:400,500,500i,700" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-one side">
-        <div class="container-two">
+  <div class="container-one side">
+    <div class="container-two">
 
-        </div>
     </div>
-    <div class="container-one central">
-        <div class="container-two">
-            <p>Home page</p>
-        </div>
+  </div>
+  <div class="container-one central">
+    <div class="container-two">
+      <p>Home page</p>
     </div>
-    <div class="container-one side" id="right-side">
-        <div class="container-two">
-            <ul id="quick-access">
-                <li><span class="shortcut">n</span>Netflix</li>
-                <li><span class="shortcut">f</span>Facebook</li>
-                <li><span class="shortcut">g</span>Google</li>
-            </ul>
-        </div>
+  </div>
+  <div class="container-one side" id="right-side">
+    <div class="container-two">
+      <ul id="quick-access">
+        <li data-id="netflix" data-target="https://www.netflix.com/fr/" data-shortcut="n">
+          <span class="shortcut">n</span>Netflix
+        </li>
+        <li data-id="facebook" data-target="https://www.facebook.com/" data-shortcut="f">
+          <span class="shortcut">f</span>Facebook
+        </li>
+        <li data-id="quora" data-target="https://www.quora.com/" data-shortcut="q">
+          <span class="shortcut">q</span>Quora
+        </li>
+      </ul>
     </div>
+  </div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-
-<!-- External Modules -->
+<script src="js/main.js"></script>
+<script src="js/quickaccess.js"></script>
 
 </html>
 

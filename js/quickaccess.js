@@ -169,13 +169,17 @@ $(document).ready(function() {
     keyToTarget[item.shortcut] = item.target;
   });
 
-  $("body").keydown(function(event) {
-    if (!event.metaKey) {
-      event.preventDefault();
+  $("body").keydown(function(e) {
+    console.log("coucou");
+    var preventDefault = !e.metaKey && !e.shiftKey && !e.ctrlKey && !e.altKey;
+    preventDefault = preventDefault && e.keycode >= 65 && e.keycode <= 90;
+    if (preventDefault) {
+      e.preventDefault();
+      console.log("Yo, default prevented");
     }
-    console.log(event.keyCode);
-    if (event.keyCode != 16) {
-      var key = keyCodes[event.keyCode];
+    console.log(e.keyCode);
+    if (e.keyCode != 16) {
+      var key = keyCodes[e.keyCode];
       console.log("Key pressed : " + key);
       if (key in keyToTarget) {
         window.location.href = keyToTarget[key];

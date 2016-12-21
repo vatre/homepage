@@ -23,12 +23,10 @@ $(document).ready(function() {
     $(sel).css('display', 'initial');
   }
   
-  console.log("#engine-" + searchEngines[0].id);
   $("#engine-" + searchEngines[0].id).css('display', 'initial');
 
 
   $("#search").keypress(function(e) {
-    console.log("Triggered : " + e.keyCode);
     if (e.keyCode == 13) {
       var url = searchEngines[engineIndex].prefix;
       url += $("#search-bar").val();

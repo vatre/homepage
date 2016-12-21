@@ -41,7 +41,7 @@ $(document).ready(function() {
       var sunset = new Date(data.sys.sunset * 1000);
       city.sunrise = sunrise.getHours() + "h" + sunrise.getMinutes();
       city.sunset = sunset.getHours() + "h" + sunset.getMinutes();
-
+      
       // Weather groups : http://openweathermap.org/weather-conditions
       // Image pack : http://www.flaticon.com/packs/weather-2
       switch (city.weather.group) {
@@ -78,8 +78,6 @@ $(document).ready(function() {
 
       updateCityInfo(city);
     });
-
-    console.log(city);
   });
 
 });

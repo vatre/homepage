@@ -175,12 +175,9 @@ $(document).ready(function() {
       preventDefault = preventDefault && e.keycode >= 65 && e.keycode <= 90;
       if (preventDefault) {
         e.preventDefault();
-        console.log("Yo, default prevented");
       }
-      console.log(e.keyCode);
       if (e.keyCode != 16) {
         var key = keyCodes[e.keyCode];
-        console.log("Key pressed : " + key);
         if (key in keyToTarget) {
           window.location.href = keyToTarget[key];
         }

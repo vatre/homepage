@@ -175,6 +175,11 @@ $(document).ready(function() {
   keyToAction.t = function() {
     $("#headline #timer-input").css('display', 'initial').trigger("focus");
   };
+  
+  //Search bar
+  keyToAction.s = function() {
+    $("#search-bar").trigger("focus");
+  }
 
   $("body").keydown(function(e) {
     if (!$("#search-bar").is(":focus") && !$('#timer-input').is(":focus")) {

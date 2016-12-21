@@ -165,7 +165,6 @@ $(document).ready(function() {
       target: $(this).data('target'),
       shortcut: $(this).data('shortcut')
     };
-
     keyToAction[item.shortcut] = function() {
       window.location.href = item.target;
     };

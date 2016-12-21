@@ -4,12 +4,20 @@ $(document).ready(function() {
     prefix: "https://www.google.fr/#q=",
     suffix: ""
   }, {
-    id: "duck",
-    prefix: "https://duckduckgo.com/?q=",
+    id: "youtube",
+    prefix: "https://www.youtube.com/results?search_query=",
     suffix: ""
   }, {
-    id: "ecosia",
-    prefix: "https://www.ecosia.org/search?q=",
+    id: "wikipedia",
+    prefix: "https://fr.wikipedia.org/w/index.php?search=",
+    suffix: ""
+  },  {
+    id: "wiktionary",
+    prefix: "https://fr.wiktionary.org/wiki/Special:Search?search=",
+    suffix: ""
+  }, {
+    id: "duck",
+    prefix: "https://duckduckgo.com/?q=",
     suffix: ""
   }]
   var engineIndex = 0;

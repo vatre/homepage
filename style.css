@@ -232,13 +232,35 @@ body .central {
   margin-top: 5px;
 }
 
+#headline .shortcut {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: rgba(1, 1, 1, 0.6);
+  margin-right: 10px;
+}
 
+#headline #timer {
+  margin-bottom: 5px;
+}
 
+#headline input {
+  margin-top: 7px;
+  display: none;
+  padding: 5px;
+  font-family: 'Nunito Sans';
+  color: rgba(0, 0, 0, 0.8);
+  border-style: none none solid none;
+  border-color: rgba(0, 0, 0, 0.8);
+  border-width: 2px;
+}
 
+#headline input:focus {
+  outline: none;
+}
 
-
-
-
+#headline .error {
+  border-color: red;
+}
 
 
 

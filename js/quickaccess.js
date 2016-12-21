@@ -156,8 +156,8 @@ $(document).ready(function() {
     234: "XF86Back",
     255: "toggle touchpad"
   };
-
-  var keyToTarget = [];
+  
+  var keyToAction = []
 
   $("#quick-access li").each(function() {
     var item = {
@@ -166,11 +166,18 @@ $(document).ready(function() {
       shortcut: $(this).data('shortcut')
     };
 
-    keyToTarget[item.shortcut] = item.target;
+    keyToAction[item.shortcut] = function() {
+      window.location.href = item.target;
+    };
   });
+  
+  // Timer
+  keyToAction.t = function() {
+    $("#headline #timer-input").css('display', 'initial').trigger("focus");
+  };
 
   $("body").keydown(function(e) {
-    if (!$("#search-bar").is(":focus")) {
+    if (!$("#search-bar").is(":focus") && !$('#timer-input').is(":focus")) {
       var preventDefault = !e.metaKey && !e.shiftKey && !e.ctrlKey && !e.altKey;
       preventDefault = preventDefault && e.keycode >= 65 && e.keycode <= 90;
       if (preventDefault) {
@@ -178,20 +185,18 @@ $(document).ready(function() {
       }
       if (e.keyCode != 16) {
         var key = keyCodes[e.keyCode];
-        if (key in keyToTarget) {
-          window.location.href = keyToTarget[key];
+        if (key in keyToAction) {
+          e.preventDefault();
+          keyToAction[key]();
         }
       }
     }
   });
 
   $("#quick-access li").click(function() {
-
     var target = $(this).data('target');
     window.location.href = target;
   });
 
-  $(".central p").trigger("focus");
-
-
+  $(".central").trigger("focus");
 });

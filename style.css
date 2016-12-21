@@ -203,6 +203,37 @@ body .central {
   font-weight: 500;
 }
 
+/* ----- Headline ----- */
+
+#headline {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+#headline #hour {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  margin-top: 7px;
+}
+
+#headline #date {
+  margin-top: 5px;
+  font-size: 0.6em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

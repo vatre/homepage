@@ -156,9 +156,9 @@ $(document).ready(function() {
     234: "XF86Back",
     255: "toggle touchpad"
   };
-  
+
   var keyToTarget = [];
-  
+
   $("#quick-access li").each(function() {
     var item = {
       id: $(this).data('id'),
@@ -170,19 +170,20 @@ $(document).ready(function() {
   });
 
   $("body").keydown(function(e) {
-    console.log("coucou");
-    var preventDefault = !e.metaKey && !e.shiftKey && !e.ctrlKey && !e.altKey;
-    preventDefault = preventDefault && e.keycode >= 65 && e.keycode <= 90;
-    if (preventDefault) {
-      e.preventDefault();
-      console.log("Yo, default prevented");
-    }
-    console.log(e.keyCode);
-    if (e.keyCode != 16) {
-      var key = keyCodes[e.keyCode];
-      console.log("Key pressed : " + key);
-      if (key in keyToTarget) {
-        window.location.href = keyToTarget[key];
+    if (!$("#search-bar").is(":focus")) {
+      var preventDefault = !e.metaKey && !e.shiftKey && !e.ctrlKey && !e.altKey;
+      preventDefault = preventDefault && e.keycode >= 65 && e.keycode <= 90;
+      if (preventDefault) {
+        e.preventDefault();
+        console.log("Yo, default prevented");
+      }
+      console.log(e.keyCode);
+      if (e.keyCode != 16) {
+        var key = keyCodes[e.keyCode];
+        console.log("Key pressed : " + key);
+        if (key in keyToTarget) {
+          window.location.href = keyToTarget[key];
+        }
       }
     }
   });
@@ -192,8 +193,8 @@ $(document).ready(function() {
     var target = $(this).data('target');
     window.location.href = target;
   });
-  
-  $("body").trigger("focus");
+
+  $(".central p").trigger("focus");
 
 
 });

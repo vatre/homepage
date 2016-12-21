@@ -74,7 +74,7 @@ $(document).ready(function() {
           break;
         default:
           city.weather.img = "img/question.png";
-      };
+      }
 
       updateCityInfo(city);
     });

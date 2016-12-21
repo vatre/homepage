@@ -172,7 +172,36 @@ body .central {
   text-align: right;
 }
 
+/* ----- Search bar ----- */
 
+#search {
+  width: 100%;
+}
+
+#search-bar {
+  width: 100%;
+  padding: 5px;
+  font-family: 'Nunito Sans';
+  font-size: 1.4em;
+  color: rgba(0, 0, 0, 0.8);
+  border-style: none none solid none;
+  border-color: rgba(0, 0, 0, 0.8);
+  border-width: 2px;
+  z-index: 3;
+}
+
+#search-bar:focus {
+  outline: none;
+}
+
+#search .engine {
+  margin-top:5px;
+  display: none;
+  z-index: 1;
+  color: rgba(1, 1, 1, 0.5);
+  font-size: 0.85em;
+  font-weight: 500;
+}
 
 
 

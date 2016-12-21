@@ -29,12 +29,16 @@ body .container-one {
 
 body .side {
   width: 27%;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 body #right-side {
   text-align: right;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+}
+
+body #left-side {
+  text-align: left;
 }
 
 body .central {
@@ -44,9 +48,60 @@ body .central {
   flex-direction: column;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  
+
   width: 40%;
   height: 100%;
+}
+
+/* ----- popup container ----- */
+
+#popup-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 100;
+  display: none;
+}
+
+#close-popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 300;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#close-popup img {
+  width: 25px;
+  height: 25px;
+}
+
+/* ----- Popup quickaccess ----- */
+
+.side ul#popup-features {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.side ul#popup-features li {
+  margin: 5px 0 5px 7px;
+}
+
+.side ul#popup-features li:hover {
+  cursor: pointer;
+  font-size: 1.05em;
+  transition: font-size 300ms;
+}
+
+.side ul#popup-features .shortcut {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: rgba(1, 1, 1, 0.6);
+  margin-left: 10px;
 }
 
 /* ----- Quick access ----- */
@@ -79,7 +134,7 @@ body .central {
   display:flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  
+
   width: 100%;
   margin-top: 50px;
 }
@@ -89,7 +144,7 @@ body .central {
   display:flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  
+
   padding-bottom: 30px;
   padding-left: 10px;
 }
@@ -100,7 +155,7 @@ body .central {
   -webkit-flex-direction: row;
   flex-direction: row;
   justify-content: space-between;
-  
+
   width: 100%;
 }
 
@@ -142,7 +197,7 @@ body .central {
   flex-direction: column;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  
+
   width: 100%;
   font-size: 0.7em;
   padding-top: 6px;
@@ -155,7 +210,7 @@ body .central {
   flex-direction: row;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  
+
   width: 100%;
   margin-bottom: 4px;
 }
@@ -261,11 +316,3 @@ body .central {
 #headline .error {
   border-color: red;
 }
-
-
-
-
-
-
-
-

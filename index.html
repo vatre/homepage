@@ -2,136 +2,147 @@
 <html>
 
 <head>
-  <title>Home page</title>
+    <title>Home page</title>
 
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400|Raleway:400,400i,500,500i,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400|Raleway:400,400i,500,500i,700" rel="stylesheet">
 </head>
 
 <body>
-  <div class="container-one side">
-    <div class="container-two">
-
-
+    <div class="container-one side">
+        <div class="container-two" id="left-side">
+            <ul id="popup-features">
+                <li data-id="calc">
+                    Calculator<span class="shortcut">c</span>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
-  <div class="container-one central">
-    <div id="headline">
-      <p id="hour">00:00:00</p>
-      <p id="date">Thursday, January 1, 1970</p>
-      <p id="timer"><span class="shortcut">t</span>Timer</p>
-      <input id="timer-input" type="text" placeholder="MM:SS" />
-      <!-- <p id="quote"></p>
+    <div class="container-one central">
+        <div id="headline">
+            <p id="hour">00:00:00</p>
+            <p id="date">Thursday, January 1, 1970</p>
+            <p id="timer"><span class="shortcut">t</span>Timer</p>
+            <input id="timer-input" type="text" placeholder="MM:SS" />
+            <!-- <p id="quote"></p>
       <p id="author"></p> -->
-    </div>
-    <div id="search">
-      <input id="search-bar" type="text" placeholder="s / ù"/>
-      <p class="engine" id="engine-google">Google</p>
-      <p class="engine" id="engine-youtube">Youtube</p>
-      <p class="engine" id="engine-wikipedia">Wikipedia</p>
-      <p class="engine" id="engine-wiktionary">Wiktionary</p>
-      <p class="engine" id="engine-duck">DuckDuckGo</p>
-    </div>
-    <div id="weather">
-      <div class="wth-city-container" id="mtp" data-owid="2992165">
-
-        <div class="main-weather-box">
-          <div class="text">
-            <p class="city-name">
-              Montpellier
-            </p>
-            <p class="weather-descr">
-              Nuageux
-            </p>
-          </div>
-          <div class="illustr">
-            <img src="img/question.png" alt="" />
-          </div>
-          <div class="temp">
-            9 °C
-          </div>
         </div>
-
-        <div class="details-box">
-          <div class="floor">
-            <div class="humidity">
-              Humidité : 91 %
-            </div>
-            <div class="wind">
-              Vent : 18 km/h
-            </div>
-          </div>
-          <div class="floor">
-            <div class="sunrise">
-              Lever du soleil : 6h03
-            </div>
-            <div class="sunset">
-              Coucher du soleil : 17h34
-            </div>
-          </div>
+        <div id="search">
+            <input id="search-bar" type="text" placeholder="s / ù" />
+            <p class="engine" id="engine-google">Google</p>
+            <p class="engine" id="engine-youtube">Youtube</p>
+            <p class="engine" id="engine-wikipedia">Wikipedia</p>
+            <p class="engine" id="engine-wiktionary">Wiktionary</p>
+            <p class="engine" id="engine-duck">DuckDuckGo</p>
         </div>
+        <div id="weather">
+            <div class="wth-city-container" id="mtp" data-owid="2992165">
 
-      </div>
+                <div class="main-weather-box">
+                    <div class="text">
+                        <p class="city-name">
+                            Montpellier
+                        </p>
+                        <p class="weather-descr">
+                            Nuageux
+                        </p>
+                    </div>
+                    <div class="illustr">
+                        <img src="img/question.png" alt="" />
+                    </div>
+                    <div class="temp">
+                        9 °C
+                    </div>
+                </div>
 
-      <div class="wth-city-container" id="paris" data-owid="2988507">
-        <div class="main-weather-box">
-          <div class="text">
-            <p class="city-name">
-              Paris
-              <p>
-                <p class="weather-descr">
-                  Nuageux
-                </p>
-          </div>
-          <div class="illustr">
-            <img src="img/question.png" alt="" />
-          </div>
-          <div class="temp">
-            9 °C
-          </div>
+                <div class="details-box">
+                    <div class="floor">
+                        <div class="humidity">
+                            Humidité : 91 %
+                        </div>
+                        <div class="wind">
+                            Vent : 18 km/h
+                        </div>
+                    </div>
+                    <div class="floor">
+                        <div class="sunrise">
+                            Lever du soleil : 6h03
+                        </div>
+                        <div class="sunset">
+                            Coucher du soleil : 17h34
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="wth-city-container" id="paris" data-owid="2988507">
+                <div class="main-weather-box">
+                    <div class="text">
+                        <p class="city-name">
+                            Paris
+                            <p>
+                                <p class="weather-descr">
+                                    Nuageux
+                                </p>
+                    </div>
+                    <div class="illustr">
+                        <img src="img/question.png" alt="" />
+                    </div>
+                    <div class="temp">
+                        9 °C
+                    </div>
+                </div>
+                <div class="details-box">
+                    <div class="floor">
+                        <div class="humidity">
+                            Humidité : 91 %
+                        </div>
+                        <div class="wind">
+                            Vent : 18 km/h
+                        </div>
+                    </div>
+                    <div class="floor">
+                        <div class="sunrise">
+                            Lever du soleil : 6h03
+                        </div>
+                        <div class="sunset">
+                            Coucher du soleil : 17h34
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="details-box">
-          <div class="floor">
-            <div class="humidity">
-              Humidité : 91 %
-            </div>
-            <div class="wind">
-              Vent : 18 km/h
-            </div>
-          </div>
-          <div class="floor">
-            <div class="sunrise">
-              Lever du soleil : 6h03
-            </div>
-            <div class="sunset">
-              Coucher du soleil : 17h34
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="container-one side" id="right-side">
-    <div class="container-two">
-      <ul id="quick-access">
-        <li data-id="netflix" data-target="https://www.netflix.com/fr/" data-shortcut="n">
-          <span class="shortcut">n</span>Netflix
-        </li>
-        <li data-id="facebook" data-target="https://www.facebook.com/" data-shortcut="f">
-          <span class="shortcut">f</span>Facebook
-        </li>
-        <li data-id="quora" data-target="https://www.quora.com/" data-shortcut="q">
-          <span class="shortcut">q</span>Quora
-        </li>
-        <li data-id="gmail" data-target="https://mail.google.com/" data-shortcut="g">
-          <span class="shortcut">g</span>Gmail
-        </li>
-        <li data-id="github" data-target="https://github.com/" data-shortcut="h">
-          <span class="shortcut">h</span>Github
-        </li>
-      </ul>
+    <div class="container-one side" id="right-side">
+        <div class="container-two">
+            <ul id="quick-access">
+                <li data-id="netflix" data-target="https://www.netflix.com/fr/" data-shortcut="n">
+                    <span class="shortcut">n</span>Netflix
+                </li>
+                <li data-id="facebook" data-target="https://www.facebook.com/" data-shortcut="f">
+                    <span class="shortcut">f</span>Facebook
+                </li>
+                <li data-id="quora" data-target="https://www.quora.com/" data-shortcut="q">
+                    <span class="shortcut">q</span>Quora
+                </li>
+                <li data-id="gmail" data-target="https://mail.google.com/" data-shortcut="g">
+                    <span class="shortcut">g</span>Gmail
+                </li>
+                <li data-id="github" data-target="https://github.com/" data-shortcut="h">
+                    <span class="shortcut">h</span>Github
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
+    <div id="popup-container">
+        <div id="close-popup">
+            <img src="img/cancel.png" alt="close" />
+        </div>
+        <div id="calculator">
+            <input type="text" />
+        </div>
+    </div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -142,8 +153,6 @@
 <script src="js/clock.js"></script>
 <!-- <script src="js/quotes.js"></script> -->
 <script src="js/timer.js"></script>
-  
-</html>
-
+<script src="js/popup.js"></script>
 
 </html>

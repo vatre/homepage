@@ -206,22 +206,31 @@ body .central {
 /* ----- Headline ----- */
 
 #headline {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 500;
 }
 
 #headline #hour {
-  font-size: 0.9em;
   margin-bottom: 5px;
-  margin-top: 7px;
+  margin-top: 12px;
 }
 
 #headline #date {
   margin-top: 5px;
-  font-size: 0.6em;
+  font-size: 0.8em;
 }
 
+#headline #quote {
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 5px;
+}
 
+#headline #author {
+  font-weight: default;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
 
 
 

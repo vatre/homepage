@@ -55,13 +55,13 @@ $(document).ready(function() {
   }
   
   function sameLevelCompute(tokens) {
-    console.log("Sub computation bitch");
-    console.log("Sequence computed : ");
-    console.log(tokens);
+    //console.log("Sub computation bitch");
+    //console.log("Sequence computed : ");
+    //console.log(tokens);
     var result = parseInt(tokens[0]);
-    console.log("Initialized result : " + result);
+    //console.log("Initialized result : " + result);
     for (var j = 1; j < tokens.length; j += 2) {
-      console.log("J : " + j);
+      //console.log("J : " + j);
       switch (tokens[j]) {
         case "*":
           result *= parseInt(tokens[j + 1]);
@@ -78,9 +78,9 @@ $(document).ready(function() {
         default:
           throw "Unknown operator encountered druing sub-computation.";
       }
-      console.log("Temp result : " + result);
+      //console.log("Temp result : " + result);
     }
-    console.log("Result : " + result);
+    //console.log("Result : " + result);
     return result;
   }
   
@@ -110,23 +110,24 @@ $(document).ready(function() {
     var lastSequenceEnd = 0;
     var len = priorityLevels.length;
     for (i = 0; i < len; i++) {
-      console.log("Hello ?");
+      //console.log("Hello ?");
       var bufferArray = [];
       var priority = priorityLevels[len - i - 1];
-      console.log("Current priority : " + priority);
+      //console.log("Current priority : " + priority);
       for (var j = 1; j < tokens.length; j += 2) {
-        console.log("j : " + j);
-        console.log("Token : " + tokens[j]);
+        //console.log("j : " + j);
+        //console.log("Token : " + tokens[j]);
         if (tokens[j] in priorities && priorities[tokens[j]] == priority) {
-          console.log("Token de bonne priorité");
+          //console.log("Token de bonne priorité");
           if (sequenceBeginning == -1) {
-            console.log("Début de séquence");
+            //console.log("Début de séquence");
             sequenceBeginning = j - 1;
+            // If there is only one operator between 2 sequences we must add it to the bufferArray
           }
         } else {
-          console.log("Token de mauvaise priorité");
+          //console.log("Token de mauvaise priorité");
           if (sequenceBeginning != -1) { // On a une séquence à calculer
-            console.log("Fin de séquence");
+            //console.log("Fin de séquence");
             bufferArray = bufferArray.concat(tokens.slice(lastSequenceEnd, sequenceBeginning));
             tempRes = sameLevelCompute(tokens.slice(sequenceBeginning, j));
             result += tempRes;
@@ -137,15 +138,17 @@ $(document).ready(function() {
         }
       }
       if (sequenceBeginning != -1) { // Cas où on a une seq en fin de liste
-        console.log("Séquence en fin de liste");
+        //console.log("Séquence en fin de liste");
+        //console.log(sequenceBeginning);
         tempRes = sameLevelCompute(tokens.slice(sequenceBeginning, j));
         result += tempRes;
         bufferArray.push(tempRes.toString());
       } else {
         bufferArray = bufferArray.concat(tokens.slice(lastSequenceEnd, tokens.length));
       }
-      console.log("New token list : " + bufferArray);
+      //console.log("New token list : " + bufferArray);
       tokens = bufferArray;
+      sequenceBeginning = -1;
       if (len - i - 1 !== 0) {
         result = 0;
       }
@@ -154,7 +157,7 @@ $(document).ready(function() {
     return result;
   }
   
-  var tokens = lexer("58  * 12 + 14 * 3");
+  var tokens = lexer("58  * 12 + 14 * 3 - 12 * 42 + 9");
   
   console.log("Tokens : ");
   console.log(tokens);

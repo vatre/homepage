@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var popupMapping = {
-        "c": "calculator",
+        //"c": "calculator",
     }
 
     function openPopupContainer() {

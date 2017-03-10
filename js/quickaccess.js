@@ -158,7 +158,8 @@ $(document).ready(function() {
   };
   
   var keyToAction = []
-
+  
+  // Registering external links
   $("#quick-access li").each(function() {
     var item = {
       id: $(this).data('id'),
@@ -202,5 +203,44 @@ $(document).ready(function() {
     window.location.href = target;
   });
 
-  $(".central").trigger("focus");
+  // POPIN SOURCES ---------------------
+  
+  var popinMapping = {
+    c: "calculator"
+  };
+  
+  function openPopinContainer() {
+    $("#popin-container").css('display', 'initial');
+  }
+  
+  function closePopinContainer() {
+    $("#popin-container .popin-item").each(function() {
+       $(this).css('display', 'none');                                    
+    });
+    $("#popin-container").css('display', 'none');
+  }
+
+  function openPopin(key) {
+    var sel = "#" + popinMapping[key];
+    openPopinContainer();
+    $(sel).css('display', 'initial');
+  }
+  
+  $("#close-popin").click(closePopinContainer);
+  
+  // Registering popin keys
+  $("#popin-container .popin-item").each(function() {
+    var key = $(this).data('key');
+    keyToAction[key] = function() {
+      // The key is also used to close the popin
+      if ($("#popin-container").css('display') != "none") {
+        closePopinContainer();
+      } else {
+        openPopin(key);
+      }
+    };
+  });
+  
+  
+  
 });

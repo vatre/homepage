@@ -3,6 +3,7 @@
 
 <head>
     <title>Home page</title>
+    <meta charset="utf-8"/>
 
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400|Raleway:400,400i,500,500i,700" rel="stylesheet">
@@ -11,15 +12,12 @@
 <body>
     <div class="container-one side">
         <div class="container-two" id="left-side">
-<<<<<<< HEAD
             <ul id="popup-features">
-                <!--<li data-id="calc">
-=======
-            <ul id="popin-features">
-                <li data-id="calc">
->>>>>>> c511a486b9cf62bac0fa014d877cb4844d5e4dcb
-                    Calculator<span class="shortcut">c</span>
-                </li>-->
+              <!--
+              <li data-id="calc">
+                  Calculator<span class="shortcut">c</span>
+              </li>
+              -->
             </ul>
         </div>
     </div>
@@ -30,7 +28,7 @@
             <p id="timer"><span class="shortcut">t</span>Timer</p>
             <input id="timer-input" type="text" placeholder="MM:SS" />
             <!-- <p id="quote"></p>
-      <p id="author"></p> -->
+            <p id="author"></p> -->
         </div>
         <div id="search">
             <input id="search-bar" type="text" placeholder="s / ù" />
@@ -128,6 +126,9 @@
                 <li data-id="facebook" data-target="https://www.facebook.com/" data-shortcut="f">
                     <span class="shortcut">f</span>Facebook
                 </li>
+                <li data-id="messenger" data-target="https://www.messenger.com/" data-shortcut="m">
+                    <span class="shortcut">m</span>Messenger
+                </li>
                 <li data-id="quora" data-target="https://www.quora.com/" data-shortcut="q">
                     <span class="shortcut">q</span>Quora
                 </li>
@@ -137,17 +138,26 @@
                 <li data-id="github" data-target="https://github.com/" data-shortcut="h">
                     <span class="shortcut">h</span>Github
                 </li>
+                <li data-id="oldreader" data-target="https://theoldreader.com/" data-shortcut="r">
+                    <span class="shortcut">r</span>TheOldReader
+                </li>
+                <li data-id="yts" data-target="https://yts.ag/" data-shortcut="y">
+                    <span class="shortcut">y</span>Yify
+                </li>
+                <li data-id="creme" data-target="https://cremedelacreme.io/" data-shortcut="c">
+                    <span class="shortcut">c</span>Crème de la crème
+                </li>
             </ul>
         </div>
     </div>
-    <div id="popin-container">
+    <!--<div id="popin-container">
         <div id="close-popin">
             <img src="img/cancel.png" alt="close" />
         </div>
         <div id="calculator" data-key="c" class="popin-item">
             <input type="text" />
         </div>
-    </div>
+    </div>-->
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -158,6 +168,6 @@
 <script src="js/clock.js"></script>
 <!-- <script src="js/quotes.js"></script> -->
 <script src="js/timer.js"></script>
-<script src="js/calculator.js"></script>
+<!--<script src="js/calculator.js"></script>-->
 
 </html>
